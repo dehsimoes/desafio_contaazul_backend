@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class ValidaMovimento {
 
-
     private static int largura = 5;
-
 
     private static int altura = 5;
 
@@ -16,7 +14,6 @@ public class ValidaMovimento {
 
 
     public Robo check(String comando) {
-
         if (!checkMovimento(comando)) {
             return null;
         }
@@ -56,7 +53,6 @@ public class ValidaMovimento {
     }
 
         public void andar() {
-
             switch (robo.getDirecao()) {
                 case N:
                     this.movimentoValido(robo.getX(), robo.getY()+1);
@@ -99,7 +95,6 @@ public class ValidaMovimento {
         }
 
         public void girarEsquerda() {
-
             switch (robo.getDirecao()) {
                 case N:
                     robo.setDirecao(Direcao.W);

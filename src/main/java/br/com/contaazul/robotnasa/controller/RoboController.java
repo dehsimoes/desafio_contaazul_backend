@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RoboController {
 
     @Autowired
-     RoboService roboService;
+    RoboService roboService;
 
     @PostMapping("/{movimentos}")
     public ResponseEntity<String> executarMovimentos(@PathVariable("movimentos") String movimentos) {
