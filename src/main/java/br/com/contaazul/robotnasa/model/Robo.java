@@ -28,10 +28,6 @@ public class Robo {
 
     @Override
     public String toString() {
-        return "(" +
-                 x +
-                ", " + y +
-                ", " + direcao +
-                ')';
+        return "(" + x + ", " + y + ", " + direcao + ')';
     }
 }

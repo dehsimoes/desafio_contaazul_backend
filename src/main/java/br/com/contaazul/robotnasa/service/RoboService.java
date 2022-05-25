@@ -16,7 +16,7 @@ public class RoboService {
         ValidaMovimento validaMovimento = new ValidaMovimento();
         Robo robo = validaMovimento.check(movimentos);
         if(robo == null){
-            return ResponseEntity.badRequest().body("Movimento invalido");
+            return ResponseEntity.badRequest().body("Movimento invalido!");
         }
         return ResponseEntity.ok(robo.toString());
     }

@@ -12,12 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/rest/mars")
 public class RoboController {
 
-    private static final String BAD_REQUEST_MESSAGE = "400 Bad Request";
     @Autowired
-    RoboService roboService;
+     RoboService roboService;
 
     @PostMapping("/{movimentos}")
-    public ResponseEntity<String> teste(@PathVariable("movimentos") String movimentos) {
+    public ResponseEntity<String> executarMovimentos(@PathVariable("movimentos") String movimentos) {
         return roboService.instrucao(movimentos);
     }
 

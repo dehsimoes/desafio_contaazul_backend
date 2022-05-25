@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class ValidaMovimento {
 
-    @Value("${movimento.limite.largura")
+
     private static int largura = 5;
 
-    @Value("${movimento.limite.altura")
+
     private static int altura = 5;
 
     Robo robo = new Robo(0, 0, Direcao.N);
@@ -17,7 +17,6 @@ public class ValidaMovimento {
 
     public Robo check(String comando) {
 
-        String[] m = comando.split("");
         if (!checkMovimento(comando)) {
             return null;
         }
@@ -122,6 +121,6 @@ public class ValidaMovimento {
 
         public void movimentoValido( int x, int y) {
             if (!((x >= 0) && (x <= largura) && (y >= 0) && (y <= altura)))
-            throw new IllegalArgumentException("Movimento fora do limite");
+            throw new IllegalArgumentException("Movimento fora do limite!");
         }
 }
